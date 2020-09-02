@@ -6,6 +6,7 @@ RUN [ $CN -eq 1 ] && sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc
     aws-cli \
     aws-cli-bash-completion \
     aws-cli-completer \
+    jq \
     bash \
     bash-completion 
 ADD . .
