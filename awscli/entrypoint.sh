@@ -1,6 +1,6 @@
-#!/bin/sh
-echo '. /etc/profile' >~/.bashrc 
-echo 'complete -C aws_completer aws' >>~/.bashrc
+#!/bin/bash
+echo 'complete -C aws_completer aws' >>/etc/profile
 aws --version
 cd ~
+. /etc/profile
 exec $@
