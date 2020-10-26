@@ -31,7 +31,7 @@ upstream none "."
 EOF
 }
 create(){
-    docker run --name ${nameProxy}  -d -p 8888:8888 -v ~/data/app/tinyproxy/:/etc/tinyproxy/ fdiskbrain/tinyproxy
+    docker run --name ${nameProxy} --restart unless-stopped -d -p 8888:8888 -v ~/data/app/tinyproxy/:/etc/tinyproxy/ fdiskbrain/tinyproxy
 }
 remove(){
     docker rm -f ${nameProxy}
